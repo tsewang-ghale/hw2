@@ -7,8 +7,8 @@ include "view_header.php";
 if (isset($_POST['my_name'])) {
 ?>
     <p>The value sent is:</p>
-    <p><?= htmlspecialchars($_POST['my_name']); ?></p>
 <?php
+    echo $_POST['my.name']
 } else {
 ?>
     <p>No data was posted.</p>
