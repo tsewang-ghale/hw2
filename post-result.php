@@ -1,18 +1,18 @@
 <?php
-$pageTitle = "Post result"; 
+$pageTitle = "Post Result"; 
 include "view_header.php"; 
 ?> 
-    <h1>Post result </h1>
+    <h1>Post Result</h1>
 <?php
-if (isset($_POST['my.name'])) {
+if (isset($_POST['my_name'])) {
 ?>
-    <p> The value sent is:</p>
+    <p>The value sent is:</p>
+    <p><?= htmlspecialchars($_POST['my_name']); ?></p>
 <?php
-    echo $_POST['my.name']; 
 } else {
-    ?> 
-    <p> Nothing posted to the page </p>
+?>
+    <p>Nothing posted to the page</p>
 <?php 
 }
 include "view_footer.php";
-?> 
+?>
