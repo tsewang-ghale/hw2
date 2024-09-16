@@ -7,11 +7,11 @@ include "view_header.php";
 if (isset($_GET['my_name'])) {
 ?>
     <p>The value sent is:</p>
-    <p><?= htmlspecialchars($_GET['my_name']); ?></p>
 <?php
+    echo $_GET['my_name']
 } else {
 ?>
-    <p>No data was received.</p>
+    <p>Nothing sent to the page</p>
 <?php
 }
 include "view_footer.php";
