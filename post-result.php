@@ -1,7 +1,7 @@
 <?php
-$pageTitle = "Post Result"; 
-include "view_header.php"; 
-?> 
+$pageTitle = "Post Result";
+include "view_header.php";
+?>
     <h1>Post Result</h1>
 <?php
 if (isset($_POST['my_name'])) {
@@ -11,8 +11,8 @@ if (isset($_POST['my_name'])) {
 <?php
 } else {
 ?>
-    <p>Nothing posted to the page</p>
-<?php 
+    <p>No data was posted.</p>
+<?php
 }
 include "view_footer.php";
 ?>
