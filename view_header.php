@@ -16,19 +16,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="post.php">Post</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.result.php">Post Result</a>
+              <a class="nav-link" href="post-result.php">Post Result</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="get.php">Get</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="get.result.php">Get Result</a>
+              <a class="nav-link" href="get-result.php">Get Result</a>
             </li>
           </ul>
         </div>
