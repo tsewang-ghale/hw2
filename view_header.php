@@ -50,6 +50,18 @@
             <li class="nav-item">
               <a class="nav-link <?= ($pageTitle == 'Get Result') ? 'active' : ''; ?>" href="get-result.php">Get Result</a>
             </li>
+             <li class="nav-item">
+              <a class="nav-link" href="idol-groups.php"> Idol Groups </a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="songs.php"> Songs</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="companies.php"> Companies </a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="awards.php"> Awards</a>
+            </li>
           </ul>
         </div>
       </div>
