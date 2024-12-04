@@ -17,7 +17,7 @@ while ($idolGroup = $idolGroups->fetch_assoc()) {
   <tr>
     <td><?php echo $idolGroup['group_id']; ?> </td>
     <td><?php echo $idolGroup['group_name']; ?></td>
-    <td><?php echo $idolGroup['debut_date']; ?></td> 
+    <td><?php echo $idolGroup['debut_year']; ?></td> 
     <td><?php echo $idolGroup['members_count']; ?></td>
     <td><a href="idol-group-details.php?id=<?php echo $idolGroup['group_id']; ?>">Details</a></td>
   </tr>
