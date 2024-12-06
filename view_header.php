@@ -38,18 +38,6 @@
             <li class="nav-item">
               <a class="nav-link <?= ($pageTitle == 'Home') ? 'active' : ''; ?>" href="index.php">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link <?= ($pageTitle == 'Post') ? 'active' : ''; ?>" href="post.php">Post</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link <?= ($pageTitle == 'Post Result') ? 'active' : ''; ?>" href="post-result.php">Post Result</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link <?= ($pageTitle == 'Get') ? 'active' : ''; ?>" href="get.php">Get</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link <?= ($pageTitle == 'Get Result') ? 'active' : ''; ?>" href="get-result.php">Get Result</a>
-            </li>
              <li class="nav-item">
               <a class="nav-link" href="idol-groups.php"> Idol Groups </a>
             </li>
