@@ -13,12 +13,12 @@
                 </tr>
             </thead>
             <tbody>
-                <?php while ($companies = $companies->fetch_assoc()) { ?>
+                <?php while ($company = $companies->fetch_assoc()) { ?>
                     <tr>
-                        <td><?php echo $companies['company_id']; ?></td>
-                        <td><?php echo $companies['company_name']; ?></td>
-                        <td><?php echo $companies['company_foundation_date']; ?></td>
-                        <td><?php echo $companies['company_ceo']; ?></td>
+                        <td><?php echo $company['company_id']; ?></td>
+                        <td><?php echo $company['company_name']; ?></td>
+                        <td><?php echo $company['company_foundation_date']; ?></td>
+                        <td><?php echo $company['company_ceo']; ?></td>
                         <td>
                             <!-- Edit Button -->
                             <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editCompanyModal<?php echo $company['company_id']; ?>">Edit</button>
@@ -48,7 +48,7 @@
                                             <input type="text" class="form-control" name="company_name" value="<?php echo $company['company_name']; ?>" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="founded_year" class="form-label">Founded Date</label>
+                                            <label for="founded_date" class="form-label">Founded Date</label>
                                             <input type="date" class="form-control" name="company_foundation_date" value="<?php echo $company['company_foundation_date']; ?>" required>
                                         </div>
                                         <div class="mb-3">
