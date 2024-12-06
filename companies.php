@@ -8,14 +8,14 @@ include "view_header.php";
 if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
         case "Add":
-            if (InsertCompany($_POST['company_id'],$_POST['company_name'], $_POST['company_founded_date'], $_POST['company_ceo'])) {
+            if (InsertCompany($_POST['company_id'],$_POST['company_name'], $_POST['company_foundation_date'], $_POST['company_ceo'])) {
                 echo '<div class="alert alert-success" role="alert">Company added.</div>';
             } else {
                 echo '<div class="alert alert-danger" role="alert">Error adding company.</div>';
             }
             break;
         case "Edit":
-            if (UpdateCompany($_POST['company_id'], $_POST['company_name'], $_POST['company_founded_date'], $_POST['company_ceo'])) {
+            if (UpdateCompany($_POST['company_id'], $_POST['company_name'], $_POST['company_foundation_date'], $_POST['company_ceo'])) {
                 echo '<div class="alert alert-success" role="alert">Company updated.</div>';
             } else {
                 echo '<div class="alert alert-danger" role="alert">Error updating company.</div>';
@@ -54,7 +54,7 @@ $companies = selectCompanies(); // Fetch companies from the model
                     <tr>
                         <td><?php echo $company['company_id']; ?></td>
                         <td><?php echo $company['company_name']; ?></td>
-                        <td><?php echo $company['company_founded_date']; ?></td>
+                        <td><?php echo $company['company_foundation_date']; ?></td>
                         <td><?php echo $company['company_ceo']; ?></td>
                         <td>
                             <!-- Edit Button -->
@@ -85,8 +85,8 @@ $companies = selectCompanies(); // Fetch companies from the model
                                             <input type="text" class="form-control" name="company_name" value="<?php echo $company['company_name']; ?>" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="company_founded_date" class="form-label">Founded Date</label>
-                                            <input type="date" class="form-control" name="company_founded_date" value="<?php echo $company['company_founded_date']; ?>" required>
+                                            <label for="company_foundation_date" class="form-label">Founded Date</label>
+                                            <input type="date" class="form-control" name="company_foundation_date" value="<?php echo $company['company_foundation_date']; ?>" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="company_ceo" class="form-label">CEO Name</label>
@@ -123,8 +123,8 @@ $companies = selectCompanies(); // Fetch companies from the model
                         <input type="text" class="form-control" name="company_name" required>
                     </div>
                     <div class="mb-3">
-                        <label for="company_founded_date" class="form-label">Founded Date</label>
-                        <input type="date" class="form-control" name="company_founded_date" required>
+                        <label for="company_foundation_date" class="form-label">Founded Date</label>
+                        <input type="date" class="form-control" name="company_foundation_date" required>
                     </div>
                     <div class="mb-3">
                         <label for="company_ceo" class="form-label">CEO Name</label>
