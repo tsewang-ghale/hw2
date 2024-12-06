@@ -52,6 +52,17 @@
               <a class="nav-link" href="company-chart.php">Company Chart</a>
             </li>
           </ul>
+          <!-- Search Form -->
+          <form class="d-flex" action="search.php" method="get">
+            <select class="form-select me-2" name="category" aria-label="Search Category">
+              <option value="songs" selected>Songs</option>
+              <option value="idol-groups">Idol Groups</option>
+              <option value="companies">Companies</option>
+              <option value="awards">Awards</option>
+            </select>
+            <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
         </div>
       </div>
     </nav>
