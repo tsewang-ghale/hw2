@@ -1,8 +1,8 @@
 <?php
 require_once("util-db.php");
-require_once("model-companies.php");
+require_once("model-Songs.php");
 
-$pageTitle = "Companies";
+$pageTitle = "Songs";
 include "view_header.php";
 
 if (isset($_POST['actionType'])) {
@@ -31,12 +31,12 @@ if (isset($_POST['actionType'])) {
     }
 }
 
-$companies = selectCompanies(); // Fetch companies from the model
+$Songs = selectSongs(); // Fetch Songs from the model
 ?>
 
-<!-- Display Companies Table -->
+<!-- Display Songs Table -->
 <div class="container mt-5">
-    <h1>Companies</h1>
+    <h1>Songs</h1>
     <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addCompanyModal">Add New Company</button>
     <div class="table-responsive">
         <table class="table">
@@ -50,7 +50,7 @@ $companies = selectCompanies(); // Fetch companies from the model
                 </tr>
             </thead>
             <tbody>
-                <?php while ($company = $companies->fetch_assoc()) { ?>
+                <?php while ($company = $Songs->fetch_assoc()) { ?>
                     <tr>
                         <td><?php echo $company['company_id']; ?></td>
                         <td><?php echo $company['company_name']; ?></td>
