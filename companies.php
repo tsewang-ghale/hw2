@@ -1,3 +1,40 @@
+<?php
+require_once("util-db.php");
+require_once("model-companies.php");
+
+$pageTitle = "Companies";
+include "view_header.php";
+
+if (isset($_POST['actionType'])) {
+    switch ($_POST['actionType']) {
+        case "Add":
+            if (InsertCompany($_POST['company_id'],$_POST['company_name'], $_POST['company_founded_date'], $_POST['company_ceo'])) {
+                echo '<div class="alert alert-success" role="alert">Company added.</div>';
+            } else {
+                echo '<div class="alert alert-danger" role="alert">Error adding company.</div>';
+            }
+            break;
+        case "Edit":
+            if (UpdateCompany($_POST['company_id'], $_POST['company_name'], $_POST['company_founded_date'], $_POST['company_ceo'])) {
+                echo '<div class="alert alert-success" role="alert">Company updated.</div>';
+            } else {
+                echo '<div class="alert alert-danger" role="alert">Error updating company.</div>';
+            }
+            break;
+        case "Delete":
+            if (DeleteCompany($_POST['company_id'])) {
+                echo '<div class="alert alert-success" role="alert">Company deleted.</div>';
+            } else {
+                echo '<div class="alert alert-danger" role="alert">Error deleting company.</div>';
+            }
+            break;
+    }
+}
+
+$companies = selectCompanies(); // Fetch companies from the model
+?>
+
+<!-- Display Companies Table -->
 <div class="container mt-5">
     <h1>Companies</h1>
     <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addCompanyModal">Add New Company</button>
@@ -8,7 +45,7 @@
                     <th>ID</th>
                     <th>Company Name</th>
                     <th>Founded Date</th>
-                    <th>Company CEO</th>
+                    <th>CEO</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -17,7 +54,7 @@
                     <tr>
                         <td><?php echo $company['company_id']; ?></td>
                         <td><?php echo $company['company_name']; ?></td>
-                        <td><?php echo $company['company_foundation_date']; ?></td>
+                        <td><?php echo $company['company_founded_date']; ?></td>
                         <td><?php echo $company['company_ceo']; ?></td>
                         <td>
                             <!-- Edit Button -->
@@ -48,11 +85,11 @@
                                             <input type="text" class="form-control" name="company_name" value="<?php echo $company['company_name']; ?>" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="founded_date" class="form-label">Founded Date</label>
-                                            <input type="date" class="form-control" name="company_foundation_date" value="<?php echo $company['company_foundation_date']; ?>" required>
+                                            <label for="company_founded_date" class="form-label">Founded Date</label>
+                                            <input type="date" class="form-control" name="company_founded_date" value="<?php echo $company['company_founded_date']; ?>" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="company_ceo" class="form-label">Company CEO</label>
+                                            <label for="company_ceo" class="form-label">CEO Name</label>
                                             <input type="text" class="form-control" name="company_ceo" value="<?php echo $company['company_ceo']; ?>" required>
                                         </div>
                                     </div>
@@ -86,11 +123,11 @@
                         <input type="text" class="form-control" name="company_name" required>
                     </div>
                     <div class="mb-3">
-                        <label for="founded_date" class="form-label">Founded Date</label>
-                        <input type="date" class="form-control" name="founded_date" required>
+                        <label for="company_founded_date" class="form-label">Founded Date</label>
+                        <input type="date" class="form-control" name="company_founded_date" required>
                     </div>
                     <div class="mb-3">
-                        <label for="company_ceo" class="form-label">Company CEO</label>
+                        <label for="company_ceo" class="form-label">CEO Name</label>
                         <input type="text" class="form-control" name="company_ceo" required>
                     </div>
                 </div>
@@ -102,3 +139,5 @@
         </div>
     </div>
 </div>
+
+<?php include "view_footer.php"; ?>
