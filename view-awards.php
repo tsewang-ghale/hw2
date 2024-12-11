@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Companies</title>
+    <title>Awards</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
       body {
@@ -20,15 +20,15 @@
     </style>
   </head>
   <body>
-    <h1 class="text-center mt-3">Companies</h1>
+    <h1 class="text-center mt-3">Awards</h1>
     <div class="container mt-5">
       <div class="row">
         <div class="col">
-          <h1> Companies </h1>
+          <h1> Awards </h1>
         </div>
         <div class="col-auto"> 
           <?php 
-          include "view-companies-newform.php";
+          include "view-awards-newform.php";
           ?>
         </div>
       </div>
@@ -37,30 +37,30 @@
           <thead>
             <tr>
               <th> ID </th>
-              <th> Company Name </th>
-              <th> Establishment Year </th>
-              <th> Company CEO </th>
+              <th> Award Name </th>
+              <th> Award Date </th>
+              <th> Idol Group ID </th>
               <th> </th>
             </tr>
           </thead>
           <tbody> 
           <?php
-          while ($company = $companies->fetch_assoc()) {
+          while ($award = $awards->fetch_assoc()) {
           ?>
             <tr>
-              <td><?php echo $company['company_id']; ?> </td>
-              <td><?php echo $company['company_name']; ?></td>
-              <td><?php echo $company['company_foundation_date']; ?></td> 
-              <td><?php echo $company['company_ceo']; ?></td>
-              <td><a href="company-details.php?id=<?php echo $company['company_id']; ?>" class="btn btn-primary btn-sm">Details</a></td>
+              <td><?php echo $award['award_id']; ?> </td>
+              <td><?php echo $award['award_name']; ?></td>
+              <td><?php echo $award['award_date']; ?></td> 
+              <td><?php echo $award['idol_group_id']; ?></td>
+              <td><a href="award-details.php?id=<?php echo $award['award_id']; ?>" class="btn btn-primary btn-sm">Details</a></td>
               <td>
                 <?php
-                include "view-companies-editform.php"; 
+                include "view-awards-editform.php"; 
                 ?> 
               </td>
               <td>
                 <form method="post" action="">
-                  <input type="hidden" name="company_id" value="<?php echo $company['company_id']; ?>">
+                  <input type="hidden" name="company_id" value="<?php echo $award['award_id']; ?>">
                   <input type="hidden" name="actionType" value="Delete">
                   <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
