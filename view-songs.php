@@ -43,7 +43,7 @@
           </thead>
           <tbody>
             <?php
-            while ($song = $songs->fetch_assoc()) {
+            while ($song = $Songs->fetch_assoc()) {
             ?>
               <tr>
                 <td><?php echo $song['song_id']; ?></td>
