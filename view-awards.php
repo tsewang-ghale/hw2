@@ -20,7 +20,6 @@
     </style>
   </head>
   <body>
-    <h1 class="text-center mt-3">Awards</h1>
     <div class="container mt-5">
       <div class="row">
         <div class="col">
