@@ -1,6 +1,6 @@
 <?php
-require_once("util-db.php");
-require_once("model-idol-groups.php");
+require_once("util_db.php");
+require_once("model_idol_groups.php");
 
 $pageTitle = "Idol Groups";
 include "view_header.php";
@@ -32,5 +32,6 @@ if (isset($_POST['actionType'])) {
 }
 
 $idolGroups = selectIdolGroups(); // Fetch idol groups from the model
-include "view-idol-groups.php";
-include "view_footer.php"; ?>
+include "view_idol_groups.php";
+include "view_footer.php"; 
+?>
