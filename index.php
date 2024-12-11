@@ -28,7 +28,7 @@
               <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="idol-groups.php">Idol Groups</a>
+              <a class="nav-link" href="idol_groups.php">Idol Groups</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="songs.php">Songs</a>
@@ -40,16 +40,16 @@
               <a class="nav-link" href="companies.php">Companies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="idol-chart.php">Idol Chart</a>
+              <a class="nav-link" href="idol_chart.php">Idol Chart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="song-chart.php">Song Chart</a>
+              <a class="nav-link" href="song_chart.php">Song Chart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="award-chart.php">Awards Chart</a>
+              <a class="nav-link" href="award_chart.php">Awards Chart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="company-chart.php">Company Chart</a>
+              <a class="nav-link" href="company_chart.php">Company Chart</a>
             </li>
           </ul>
           <!-- Search Form -->
