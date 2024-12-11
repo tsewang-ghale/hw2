@@ -39,7 +39,7 @@
               <a class="nav-link <?= ($pageTitle == 'Home') ? 'active' : ''; ?>" href="index.php">Home</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="idol-groups.php"> Idol Groups </a>
+              <a class="nav-link" href="idol_groups.php"> Idol Groups </a>
             </li>
              <li class="nav-item">
               <a class="nav-link" href="songs.php"> Songs</a>
