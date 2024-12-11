@@ -32,7 +32,7 @@ if (isset($_POST['actionType'])) {
 }
 $awards = selectAwards(); // Fetch awards from the model
 include "view-awards.php"; 
-include "view-footer.php"
+include "view_footer.php"
 ?>
 
     
