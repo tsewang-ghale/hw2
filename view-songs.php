@@ -22,31 +22,44 @@
   <body>
     <h1 class="text-center mt-3">Songs</h1>
     <div class="container mt-5">
-      <div class="table-responsive">
+      <div class="row">
+        <div class="col">
+          <h2>Add New Song</h2>
+        </div>
+        <div class="col-auto">
+          <?php include "view-songs-newform.php"; ?>
+        </div>
+      </div>
+      <div class="table-responsive mt-4">
         <table class="table">
           <thead>
             <tr>
-              <th> ID </th>
-              <th> Song Name </th>
-              <th> Release Date </th>
-              <th> Idol Group ID </th>
-              <th> </th>
+              <th>ID</th>
+              <th>Song Name</th>
+              <th>Release Date</th>
+              <th>Idol Group ID</th>
+              <th>Actions</th>
             </tr>
           </thead>
-          <tbody> 
-          <?php
-          while ($song = $songs->fetch_assoc()) {
-          ?>
-            <tr>
-              <td><?php echo $song['song_id']; ?> </td>
-              <td><?php echo $song['song_name']; ?></td>
-              <td><?php echo $song['release_date']; ?></td> 
-              <td><?php echo $song['idol_group_id']; ?></td>
-              <td><a href="song-details.php?id=<?php echo $song['song_id']; ?>" class="btn btn-primary btn-sm">Details</a></td>
-            </tr>
-          <?php
-          }
-          ?>
+          <tbody>
+            <?php
+            while ($song = $songs->fetch_assoc()) {
+            ?>
+              <tr>
+                <td><?php echo $song['song_id']; ?></td>
+                <td><?php echo $song['song_name']; ?></td>
+                <td><?php echo $song['release_date']; ?></td>
+                <td><?php echo $song['idol_group_id']; ?></td>
+                <td>
+                  <a href="song-details.php?id=<?php echo $song['song_id']; ?>" class="btn btn-primary btn-sm">Details</a>
+                  <div class="mt-2">
+                    <?php include "view-songs-editform.php"; ?>
+                  </div>
+                </td>
+              </tr>
+            <?php
+            }
+            ?>
           </tbody>
         </table>
       </div>
