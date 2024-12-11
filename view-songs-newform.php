@@ -16,24 +16,20 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="song_title_<?php echo $song['song_id']; ?>" class="form-label">Song Title</label>
-            <input type="text" class="form-control" id="song_title_<?php echo $song['song_id']; ?>" name="song_title" value="<?php echo $song['song_title']; ?>">
+            <label for="song_id_<?php echo $song['song_id']; ?>" class="form-label">Song ID</l abel>
+            <input type="number" class="form-control" id="song_id_<?php echo $song['song_id']; ?>" name="song_id" value="<?php echo $song['song_id']; ?>">
           </div>
           <div class="mb-3">
-            <label for="artist_name_<?php echo $song['song_id']; ?>" class="form-label">Artist</label>
-            <input type="text" class="form-control" id="artist_name_<?php echo $song['song_id']; ?>" name="artist_name" value="<?php echo $song['artist_name']; ?>">
+            <label for="song_name_<?php echo $song['song_id']; ?>" class="form-label"> Song Name </label>
+            <input type="text" class="form-control" id="song_name_<?php echo $song['song_id']; ?>" name="song_name" value="<?php echo $song['song_name']; ?>">
           </div>
           <div class="mb-3">
-            <label for="album_name_<?php echo $song['song_id']; ?>" class="form-label">Album</label>
-            <input type="text" class="form-control" id="album_name_<?php echo $song['song_id']; ?>" name="album_name" value="<?php echo $song['album_name']; ?>">
+            <label for="release_date_<?php echo $song['song_id']; ?>" class="form-label"> Release Date </label>
+            <input type="date" class="form-control" id="release_date_<?php echo $song['song_id']; ?>" name="release_date" value="<?php echo $song['release_date']; ?>">
           </div>
           <div class="mb-3">
-            <label for="genre_<?php echo $song['song_id']; ?>" class="form-label">Genre</label>
-            <input type="text" class="form-control" id="genre_<?php echo $song['song_id']; ?>" name="genre" value="<?php echo $song['genre']; ?>">
-          </div>
-          <div class="mb-3">
-            <label for="release_year_<?php echo $song['song_id']; ?>" class="form-label">Release Year</label>
-            <input type="number" class="form-control" id="release_year_<?php echo $song['song_id']; ?>" name="release_year" value="<?php echo $song['release_year']; ?>">
+            <label for="idol_group_id_<?php echo $song['song_id']; ?>" class="form-label"> Idol Group ID</label>
+            <input type="number" class="form-control" id="idol_group_id_<?php echo $song['song_id']; ?>" name="idol_group_id" value="<?php echo $song['idol_group_id']; ?>">
           </div>
           <input type="hidden" name="song_id" value="<?php echo $song['song_id']; ?>">
           <input type="hidden" name="actionType" value="Edit"> 
