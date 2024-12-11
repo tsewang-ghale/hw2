@@ -27,6 +27,17 @@
   <body>
     <h1>Idol Groups</h1>
     <div class="container my-5">
+      <div class="row">
+        <div class="col">
+          <h1>Idol Groups</h1>
+        </div>
+        <div class="col-auto">
+          <?php 
+          include "view-idol-groups-newform.php";
+          ?>
+        </div>
+      </div>
+
       <div class="table-responsive">
         <table class="table">
           <thead>
@@ -35,6 +46,7 @@
               <th> Group Name </th>
               <th> Debut Date </th>
               <th> Members Count </th>
+              <th> </th>
               <th> </th>
             </tr>
           </thead>
@@ -48,6 +60,11 @@
               <td><?php echo $idolGroup['debut_year']; ?></td> 
               <td><?php echo $idolGroup['members_count']; ?></td>
               <td><a href="idol-group-details.php?id=<?php echo $idolGroup['group_id']; ?>" class="btn btn-info btn-sm">Details</a></td>
+              <td>
+                <?php
+                include "view-idol-groups-editform.php";
+                ?>
+              </td>
             </tr>
           <?php
           }
