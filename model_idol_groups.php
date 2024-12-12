@@ -28,11 +28,11 @@ function InsertIdolGroup($group_name, $debut_year, $members_count) {
 function UpdateIdolGroup($group_id,$group_name, $debut_year, $members_count) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `IdolGroups` SET `group_name` = ?, `debut_year` = ?, `members_count` = ? WHERE `group_id` = ?");
+        $stmt = $conn->prepare("UPDATE `IdolGroups` SET group_name = ?, debut_year = ?, members_count = ? WHERE group_id = ?");
         if (!$stmt) {
             throw new Exception("Failed to prepare statement: " . $conn->error);
         }
-        $stmt->bind_param("issi",$group_id,$group_name, $debut_year, $members_count); 
+        $stmt->bind_param("ssii",$group_id,$group_name, $debut_year, $members_count); 
         $success = $stmt->execute();
         $stmt->close();
         $conn->close();
