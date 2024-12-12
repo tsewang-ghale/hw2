@@ -12,7 +12,7 @@ function selectIdolGroups() {
         throw $e;
     }
 }
-function InsertIdolGroups($group_name, $debut_year, $members_count) {
+function InsertIdolGroup($group_name, $debut_year, $members_count) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `IdolGroups` (`group_name`, `debut_year`,`members_count`) VALUES (?, ?, ?)");
@@ -25,7 +25,7 @@ function InsertIdolGroups($group_name, $debut_year, $members_count) {
         throw $e;
     }
 }
-function UpdateIdolGroups($group_id,$group_name, $debut_year, $members_count) {
+function UpdateIdolGroup($group_id,$group_name, $debut_year, $members_count) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `IdolGroups` SET `group_name` = ?, `debut_year` = ?, `members_count` = ? WHERE `group_id` = ?");
@@ -44,7 +44,7 @@ function UpdateIdolGroups($group_id,$group_name, $debut_year, $members_count) {
         throw $e; 
     }
 }
-function deleteIdolGroups($group_id) {
+function deleteIdolGroup($group_id) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM `IdolGroups` WHERE group_id = ?");
