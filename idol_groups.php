@@ -8,7 +8,7 @@ include "view_header.php";
 if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
         case "Add":
-            if (InsertIdolGroup($_POST['group_name'], $_POST['debut_year'], $_POST['members_count'])) {
+            if (InsertIdolGroup($_POST['group_id'],$_POST['group_name'], $_POST['debut_year'], $_POST['members_count'])) {
                 echo '<div class="alert alert-success" role="alert">Idol Group added.</div>';
             } else {
                 echo '<div class="alert alert-danger" role="alert">Error adding Idol Group.</div>';
