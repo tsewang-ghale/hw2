@@ -12,6 +12,7 @@ function selectSongs() {
         throw $e;
     }
 }
+
 function insertSong($song_name, $release_date, $group_id) {
     try {
         $conn = get_db_connection();
@@ -25,6 +26,7 @@ function insertSong($song_name, $release_date, $group_id) {
         throw $e;
     }
 }
+
 function updateSong($song_id, $song_name, $release_date, $group_id) {
     try {
         $conn = get_db_connection();
@@ -44,6 +46,7 @@ function updateSong($song_id, $song_name, $release_date, $group_id) {
         throw $e;
     }
 }
+
 function deleteSong($song_id) {
     try {
         $conn = get_db_connection();
@@ -53,6 +56,21 @@ function deleteSong($song_id) {
         $stmt->close();
         $conn->close();
         return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+// Fetch the group IDs and names for the dropdown
+function getGroupIds() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT group_id, group_name FROM IdolGroups");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
