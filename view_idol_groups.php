@@ -9,7 +9,7 @@
   <style>
     /* Apply background image to the body */
     body {
-      background-image: url('b3.jpg'); /* Make sure the image is in the correct path */
+      background-image: url('b7.jpeg'); /* Make sure the image is in the correct path */
       background-size: cover; /* Ensure the background covers the entire page */
       background-position: center; /* Center the background image */
       background-repeat: no-repeat; /* Prevent the background from repeating */
