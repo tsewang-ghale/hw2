@@ -16,10 +16,6 @@
       </div>
       <div class="modal-body">
         <form method="post" action="">
-          <div class="mb-3">
-            <label for="group_id<?php echo $idol_group['group_id']; ?>" class="form-label">Group ID</label>
-            <input type="number" class="form-control" id="group_id<?php echo $idol_group['group_id']; ?>" name="group_id" value="<?php echo $idol_group['group_id']; ?>">
-          </div>
             <div class="mb-3">
             <label for="group_name<?php echo $idol_group['group_id']; ?>" class="form-label">Group Name</label>
             <input type="text" class="form-control" id="group_name<?php echo $idol_group['group_id']; ?>" name="group_name" value="<?php echo $idol_group['group_name']; ?>">
@@ -30,7 +26,7 @@
           </div>
           <div class="mb-3">
             <label for="members<?php echo $idol_group['group_id']; ?>" class="form-label">Members</label>
-            <input type="text" class="form-control" id="members<?php echo $idol_group['group_id']; ?>" name="members" value="<?php echo $idol_group['members']; ?>">
+            <input type="numbers" class="form-control" id="members<?php echo $idol_group['group_id']; ?>" name="members" value="<?php echo $idol_group['members']; ?>">
           </div>
           <input type="hidden" name="group_id" value="<?php echo $idol_group['group_id']; ?>">
           <input type="hidden" name="actionType" value="Edit">
