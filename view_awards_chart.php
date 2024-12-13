@@ -8,7 +8,7 @@
 <style>
   /* Ensure that the canvas has specific width and height */
   #myChart {
-    width: 50% !important; /* Adjust the width of the chart relative to its container */
+    width: 70% !important; /* Adjust the width of the chart relative to its container */
     height: 300px !important; /* Fixed height for the chart */
   }
 </style>
