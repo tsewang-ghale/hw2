@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="background-image: url('b3.jpg'); background-size: cover; background-position: center;">
   <div class="col">
     <h1>Companies</h1>
   </div>
