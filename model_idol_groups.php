@@ -15,7 +15,7 @@ function selectIdolGroups() {
 function InsertIdolGroup($group_name, $debut_year, $members_count) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `IdolGroups` (`group_name`, `debut_year`,`members_count`) VALUES (?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO IdolGroups (group_name, debut_year,members_count) VALUES (?, ?, ?)");
         $stmt->bind_param("ssi", $group_name, $debut_year, $members_count);
         $success= $stmt->execute();
         $conn->close();
