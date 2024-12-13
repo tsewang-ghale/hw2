@@ -14,8 +14,8 @@ $customerNames = [];
 
 while ($award = $awards->fetch_assoc()) {
     // Store the customer name and the count of awards per customer
-    $customerNames[] = $award['cust_id']; // Assuming 'cust_id' represents the customer ID
-    $awardData[] = (int) $award['award_id']; // Assuming 'award_id' represents an individual award
+    $awardNames[] = $award['award_id']; 
+    $awardData[] = (int) $award['award_id']; 
 }
 
 include "view_awards_chart.php"; // Include the chart view (updated to view-awards-chart.php)
