@@ -17,16 +17,12 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="song_id<?php echo $song['song_id']; ?>" class="form-label">Song ID</label>
-            <input type="number" class="form-control" id="song_id<?php echo $song['song_id']; ?>" name="song_id" value="<?php echo $song['song_id']; ?>">
-          </div>
-           <div class="mb-3">
             <label for="song_name<?php echo $song['song_id']; ?>" class="form-label">Song Name</label>
             <input type="text" class="form-control" id="song_name<?php echo $song['song_id']; ?>" name="song_name" value="<?php echo $song['song_name']; ?>">
           </div>
           <div class="mb-3">
             <label for="release_date<?php echo $song['song_id']; ?>" class="form-label">Release Date</label>
-            <input type="date" class="form-control" id="release_date<?php echo $song['song_id']; ?>" name="release_date" value="<?php echo $song['release_date']; ?>">
+            <input type="number" class="form-control" id="release_date<?php echo $song['song_id']; ?>" name="release_date" value="<?php echo $song['release_date']; ?>">
           </div>
           <div class="mb-3">
             <label for="idol_group_id<?php echo $song['song_id']; ?>" class="form-label">Idol Group ID</label>
