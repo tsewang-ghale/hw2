@@ -16,6 +16,10 @@
       </div>
       <div class="modal-body">
         <form method= "post" action = "">
+            <div class="mb-3">
+            <label for="group_id <?php echo $idolGroup['group_id'];?>" class="form-label"> Group ID </label>
+            <input type="number" class="form-control" id="group_id <?php echo $idolGroup['group_id']; ?>" name = "group_id" value = "<?php echo $idolGroup['group_id']; ?>">
+            </div> 
           <div class="mb-3">
             <label for="group_name <?php echo $idolGroup['group_id'];?>" class="form-label"> Group Name </label>
             <input type="text" class="form-control" id="group_name <?php echo $idolGroup['group_id']; ?>" name = "group_name" value = "<?php echo $idolGroup['group_name']; ?>">
