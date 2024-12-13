@@ -1,5 +1,4 @@
 <?php
-require_once("util_db.php");
 
 function select_top_award_winners() {
     try {
