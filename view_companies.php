@@ -4,77 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Companies</title>
-  <link rel="stylesheet" href="path/to/your/css/file.css">
+ <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     /* Set the background image for the entire page */
     body {
-      background-image: url('b3.jpg'); /* Replace with actual path to your image */
+      background-image: url('b3.jpg'); /* Make sure the image path is correct */
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      color: #fff; /* Adjust text color for better visibility */
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      height: 100vh;
     }
 
-    h1 {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 2.5em;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 20px;
-      padding: 10px;
-    }
-
-    .table {
-      width: 90%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      border-radius: 10px;
-      overflow: hidden;
+    /* Custom Styles for the Table and Content */
+    .container {
+      background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+      padding: 20px;
+      border-radius: 8px;
     }
 
     .table th, .table td {
-      border: 1px solid #ddd;
-      text-align: center;
-      padding: 10px;
+      vertical-align: middle;
     }
 
     .table th {
-      background-color: rgba(0, 0, 0, 0.8);
-      font-weight: bold;
+      background-color: #f8f9fa;
+      color: #495057;
     }
 
-    .btn {
+    .table tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .btn-primary {
       background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 5px;
+      border-color: #007bff;
     }
 
-    .btn:hover {
+    .btn-primary:hover {
       background-color: #0056b3;
+      border-color: #004085;
     }
 
-    .table-responsive {
-      overflow-x: auto;
+    
+    .row h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #343a40;
+    }
+
+    .col-auto {
+      display: flex;
+      align-items: center;
     }
   </style>
 </head>
 <body>
-  <div class="row">
-    <div class="col">
+  
+<div class="container mt-4">
+    <!-- Row for the Header and Form -->
+    <div class="row mb-4">
+      <div class="col">
       <h1>Companies</h1>
     </div>
     <div class="col-auto">
@@ -83,17 +73,17 @@
       ?>
     </div>
   </div>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
+  
+   <div class="table-responsive mt-4">
+      <table class="table table-bordered table-hover">
+        <thead>
         <tr>
           <th>ID</th>
           <th>Company Name</th>
           <th>Establishment Year</th>
           <th>Company CEO</th>
-          <th></th>
-          <th></th>
-          <th></th>
+          <th>Edit</th>
+          <th> Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -105,7 +95,6 @@
           <td><?php echo $company['company_name']; ?></td>
           <td><?php echo $company['company_foundation_year']; ?></td> 
           <td><?php echo $company['company_ceo']; ?></td>
-          <td></td>
           <td>
             <?php
             include "view_companies_editform.php"; 
@@ -130,5 +119,7 @@
       </tbody>
     </table>
   </div>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
