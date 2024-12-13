@@ -9,7 +9,7 @@
   <style>
     /* Set the background image for the entire page */
     body {
-      background-image: url('b3.jpg'); /* Make sure the image path is correct */
+      background-image: url('b7.jpeg'); /* Make sure the image path is correct */
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
