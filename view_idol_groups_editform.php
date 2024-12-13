@@ -24,7 +24,10 @@
             <label for="debut_year <?php echo $idolGroup['group_id']; ?>" class="form-label"> Debut Year</label>
             <input type="text" class="form-control" id="debut_year <?php echo $idolGroup['group_id']; ?>" name = "debut_year" value = "<?php echo $idolGroup['debut_year']; ?>">
           </div>
-           
+              <div class="mb-3">
+            <label for="debut_year <?php echo $idolGroup['group_id']; ?>" class="form-label"> Debut Year</label>
+            <input type="text" class="form-control" id="debut_year <?php echo $idolGroup['group_id']; ?>" name = "debut_year" value = "<?php echo $idolGroup['debut_year']; ?>">
+          </div>
             <input type="hidden" name = "group_id" value = "<?php echo $idolGroup['group_id']; ?>">
           <input type = "hidden" name = "actionType" value = "Edit"> 
           <button type="submit" class="btn btn-primary">Save</button>
