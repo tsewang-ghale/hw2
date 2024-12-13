@@ -26,7 +26,7 @@
           </div>
           <div class="mb-3">
             <label for="release_date" class="form-label">Release Date</label>
-            <input type="date" class="form-control" id="release_date" name="release_date">
+            <input type="number" class="form-control" id="release_date" name="release_date">
           </div>
           <div class="mb-3">
             <label for="idol_group_id" class="form-label">Idol Group ID</label>
