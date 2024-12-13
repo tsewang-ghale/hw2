@@ -7,7 +7,7 @@
 <!-- Style to adjust the chart size -->
 <style>
   #myChart {
-    width: 60%; /* Adjust the width of the chart relative to its container */
+    width: 50%; /* Adjust the width of the chart relative to its container */
     height: 300px; /* Fixed height for the chart */
   }
 </style>
