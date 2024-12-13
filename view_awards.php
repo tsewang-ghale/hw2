@@ -4,20 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awards</title>
-  <link rel="stylesheet" href="path/to/your/css/file.css">
-  <style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
     /* Set the background image for the entire page */
     body {
-      background-image: url('b3.jpg');
+      background-image: url('b3.jpg'); /* Make sure the image path is correct */
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    /* Custom Styles for the Table and Content */
+    .container {
+      background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .table th, .table td {
+      vertical-align: middle;
+    }
+
+    .table th {
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    .table tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+    }
+
+  .row h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #343a40;
+    }
+
+    .col-auto {
+      display: flex;
+      align-items: center;
     }
   </style>
-</head>
+</head> 
 <body>
-  <div class="row">
-    <div class="col">
+  
+  <div class="container mt-4">
+    <!-- Row for the Header and Form -->
+    <div class="row mb-4">
+      <div class="col">
       <h1>Awards</h1>
     </div>
     <div class="col-auto">
@@ -26,8 +72,10 @@
       ?>
     </div>
   </div>
-  <div class="table-responsive">
-    <table class="table">
+
+  <!-- Table for displaying Companies -->
+    <div class="table-responsive mt-4">
+      <table class="table table-bordered table-hover">
       <thead>
         <tr>
           <th>ID</th>
@@ -71,5 +119,12 @@
       </tbody>
     </table>
   </div>
+
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    
 </body>
 </html>
