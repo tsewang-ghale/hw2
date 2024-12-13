@@ -26,7 +26,7 @@
           </div>
           <div class="mb-3">
             <label for="company_foundation_date<?php echo $company['company_id']; ?>" class="form-label">Company Foundation Date</label>
-            <input type="date" class="form-control" id="company_foundation_date<?php echo $company['company_id']; ?>" name="company_foundation_date" value="<?php echo $company['company_foundation_date']; ?>">
+            <input type="number" class="form-control" id="company_foundation_date<?php echo $company['company_id']; ?>" name="company_foundation_date" value="<?php echo $company['company_foundation_date']; ?>">
           </div>
           <div class="mb-3">
             <label for="company_ceo<?php echo $company['company_id']; ?>" class="form-label">Company CEO</label>
