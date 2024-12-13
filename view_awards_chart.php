@@ -1,8 +1,16 @@
 <h1>Awards Chart</h1>
 <div>
-  <!-- Adjusting the width and height of the canvas element -->
-  <canvas id="myChart" width="400" height="300"></canvas>
+  <!-- Chart container -->
+  <canvas id="myChart"></canvas>
 </div>
+
+<!-- Style to adjust the chart size -->
+<style>
+  #myChart {
+    width: 60%; /* Adjust the width of the chart relative to its container */
+    height: 300px; /* Fixed height for the chart */
+  }
+</style>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
