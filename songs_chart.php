@@ -1,6 +1,6 @@
 <?php
 require_once("util_db.php");
-require_once("model_song_chart.php");
+require_once("model_songs_chart.php");
   
 $pageTitle = "Song Chart";
 include "view_header.php";
