@@ -101,7 +101,7 @@ mysqli_close($conn);
                     } elseif ($category == 'companies') {
                         echo "<thead><tr><th>Company Name</th><th>Founded Year</th><th>CEO</th></tr></thead>";
                     } elseif ($category == 'awards') {
-                        echo "<thead><tr><th>Award Name</th><th>Category</th><th>Year</th></tr></thead>";
+                        echo "<thead><tr><th>Award Name</th><th>Award year</th><th>Group ID</th></tr></thead>";
                     }
 
                     // Display results
