@@ -81,7 +81,7 @@
             <th>ID</th>
             <th>Song Name</th>
             <th>Release Date</th>
-            <th>Idol Group ID</th>
+            <th>Idol Group</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -94,7 +94,20 @@
               <td><?php echo $song['song_id']; ?></td>
               <td><?php echo $song['song_name']; ?></td>
               <td><?php echo $song['release_date']; ?></td>
-              <td><?php echo $song['group_id']; ?></td>
+              <td>
+                <?php 
+                  // Fetch idol group names from database for dropdown
+                  $groupQuery = "SELECT group_id, group_name FROM idol_groups";
+                  $groupResult = $conn->query($groupQuery);
+                ?>
+                <select class="form-select" name="group_id" id="group_id">
+                  <?php while ($group = $groupResult->fetch_assoc()) { ?>
+                    <option value="<?php echo $group['group_id']; ?>" <?php echo ($song['group_id'] == $group['group_id']) ? 'selected' : ''; ?>>
+                      <?php echo $group['group_name']; ?>
+                    </option>
+                  <?php } ?>
+                </select>
+              </td>
               <td>
                 <?php
                 include "view_songs_editform.php";
