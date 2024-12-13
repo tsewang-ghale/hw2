@@ -1,6 +1,6 @@
 <?php
 // Include your database connection
-include('db_connection.php');
+require_once("util_db.php");
 
 // Get the category and search query from the form submission
 $category = isset($_GET['category']) ? $_GET['category'] : '';
