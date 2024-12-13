@@ -13,14 +13,6 @@
       background-position: center center;
       background-repeat: no-repeat;
     }
-
-    /* Optional: Set a background image for just the table section */
-    .table-responsive {
-      background-image: url('b2.jpg');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
   </style>
 </head>
 <body>
