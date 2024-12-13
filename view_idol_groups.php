@@ -7,6 +7,15 @@
   <!-- Add Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* Apply background image to the body */
+    body {
+      background-image: url('images/b3.jpg'); /* Make sure the image is in the correct path */
+      background-size: cover; /* Ensure the background covers the entire page */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Prevent the background from repeating */
+      height: 100vh; /* Ensure the background covers the entire viewport height */
+    }
+
     /* Custom Styles for the Table */
     table th, table td {
       vertical-align: middle;
@@ -35,6 +44,11 @@
     .col-auto {
       display: flex;
       align-items: center;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.8); /* Light background to make the text readable */
+      padding: 20px;
+      border-radius: 8px;
     }
   </style>
 </head>
