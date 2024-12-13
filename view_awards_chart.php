@@ -6,9 +6,10 @@
 
 <!-- Style to adjust the chart size -->
 <style>
+  /* Ensure that the canvas has specific width and height */
   #myChart {
-    width: 50%; /* Adjust the width of the chart relative to its container */
-    height: 300px; /* Fixed height for the chart */
+    width: 50% !important; /* Adjust the width of the chart relative to its container */
+    height: 300px !important; /* Fixed height for the chart */
   }
 </style>
 
@@ -67,6 +68,7 @@
       }]
     },
     options: {
+      responsive: false, // Prevent Chart.js from overriding custom size
       scales: {
         y: {
           beginAtZero: true // Ensure the y-axis starts at zero
