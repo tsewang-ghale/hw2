@@ -1,6 +1,6 @@
 <?php
 require_once("util_db.php");
-require_once("model_awards.php"); // Change model file to handle awards
+require_once("model_awards_chart.php"); // Change model file to handle awards
 
 $pageTitle = "Awards Chart"; // Title of the page
 include "view_header.php";  // Header part
