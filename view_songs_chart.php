@@ -4,6 +4,15 @@
 </div>
 
 <style>
+  /* Set the background image for the entire page or a specific container */
+  body {
+    background-image: url('b7.jpeg');
+    background-size: cover; /* Make sure the background covers the entire page */
+    background-position: center; /* Center the background */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    color: white; /* Optional: Adjust text color for better contrast */
+  }
+
   #myChart {
     width: 50% !important; /* Adjust the width as per your needs */
     height: auto !important; /* Maintain aspect ratio */
