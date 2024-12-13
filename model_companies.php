@@ -2,7 +2,7 @@
 function selectCompanies() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT company_id, company_name, company_foundation_date, company_ceo FROM Companies");
+        $stmt = $conn->prepare("SELECT company_id, company_name, company_foundation_year, company_ceo FROM Companies");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,11 +13,11 @@ function selectCompanies() {
     }
 }
 
-function insertCompany($company_name, $company_foundation_date, $company_ceo) {
+function insertCompany($company_name, $company_foundation_year, $company_ceo) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO Companies (company_name, company_foundation_date, company_ceo) VALUES (?, ?, ?)");
-        $stmt->bind_param("sis", $company_name, $company_foundation_date, $company_ceo);
+        $stmt = $conn->prepare("INSERT INTO Companies (company_name, company_foundation_year, company_ceo) VALUES (?, ?, ?)");
+        $stmt->bind_param("sis", $company_name, $company_foundation_year, $company_ceo);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,14 +27,14 @@ function insertCompany($company_name, $company_foundation_date, $company_ceo) {
     }
 }
 
-function updateCompany($company_id, $company_name, $company_foundation_date, $company_ceo) {
+function updateCompany($company_id, $company_name, $company_foundation_year, $company_ceo) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE Companies SET company_name = ?, company_foundation_date = ?, company_ceo = ? WHERE company_id = ?");
+        $stmt = $conn->prepare("UPDATE Companies SET company_name = ?, company_foundation_year = ?, company_ceo = ? WHERE company_id = ?");
         if (!$stmt) {
             throw new Exception("Failed to prepare statement: " . $conn->error);
         }
-        $stmt->bind_param("sisi", $company_name, $company_foundation_date, $company_ceo, $company_id);
+        $stmt->bind_param("sisi", $company_name, $company_foundation_year, $company_ceo, $company_id);
         $success = $stmt->execute();
         $stmt->close();
         $conn->close();
