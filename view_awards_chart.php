@@ -4,15 +4,24 @@
   <canvas id="myChart"></canvas>
 </div>
 
-<!-- Style to adjust the chart size and set background -->
+<!-- Style to adjust the chart size and set background slideshow -->
 <style>
-  /* Set the background image for the entire page */
+  /* Set the background slideshow for the entire page */
   body {
-    background-image: url('b4.jpg'); /* Path to the background image */
+    background-image: url('b1.jpeg'), url('b7.jpeg'), url('b4.jpg'); /* Add multiple background images */
     background-size: cover; /* Ensure the background covers the entire page */
     background-position: center; /* Center the background */
     background-attachment: fixed; /* Keep the background fixed when scrolling */
+    animation: slideBackground 30s infinite; /* Apply background slideshow animation */
     color: white; /* Optional: Adjust text color for better contrast */
+  }
+
+  /* Keyframe animation for background slideshow */
+  @keyframes slideBackground {
+    0% { background-image: url('b1.jpeg'); }
+    33% { background-image: url('b7.jpeg'); }
+    66% { background-image: url('b1.jpg'); }
+    100% { background-image: url('b7.jpeg'); }
   }
 
   /* Ensure that the canvas has specific width and height */
@@ -20,6 +29,7 @@
     width: 70% !important; /* Adjust the width of the chart relative to its container */
     height: 800px !important; /* Fixed height for the chart */
     background-color: rgba(0, 0, 0, 0.3); /* Optional: Add slight transparency for better visibility */
+    border-radius: 10px; /* Optional: Smooth edges for better aesthetics */
   }
 </style>
 
