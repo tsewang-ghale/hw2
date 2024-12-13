@@ -22,7 +22,7 @@
           </div>
            <div class="mb-3">
             <label for="debut_year <?php echo $idolGroup['group_id']; ?>" class="form-label"> Debut Year</label>
-            <input type="text" class="form-control" id="debut_year <?php echo $idolGroup['group_id']; ?>" name = "debut_year" value = "<?php echo $idolGroup['debut_year']; ?>">
+            <input type="number" class="form-control" id="debut_year <?php echo $idolGroup['group_id']; ?>" name = "debut_year" value = "<?php echo $idolGroup['debut_year']; ?>">
           </div>
               <div class="mb-3">
             <label for="members_count <?php echo $idolGroup['group_id']; ?>" class="form-label"> Members count</label>
