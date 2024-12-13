@@ -2,7 +2,7 @@
 function selectAwards() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT award_id, award_name, award_year, idol_group_id FROM Awards");
+        $stmt = $conn->prepare("SELECT award_id, award_name, award_year, group_id FROM Awards");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,11 +13,11 @@ function selectAwards() {
     }
 }
 
-function InsertAward($award_name, $award_year, $idol_group_id) {
+function InsertAward($award_name, $award_year, $group_id) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO Awards (award_name, award_year, idol_group_id) VALUES (?, ?, ?)");
-        $stmt->bind_param("sii", $award_name, $award_year, $idol_group_id);
+        $stmt = $conn->prepare("INSERT INTO Awards (award_name, award_year, group_id) VALUES (?, ?, ?)");
+        $stmt->bind_param("sii", $award_name, $award_year, $group_id);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,14 +27,14 @@ function InsertAward($award_name, $award_year, $idol_group_id) {
     }
 }
 
-function UpdateAward($award_id, $award_name, $award_year, $idol_group_id) {
+function UpdateAward($award_id, $award_name, $award_year, $group_id) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE Awards SET award_name = ?, award_year = ?, idol_group_id = ? WHERE award_id = ?");
+        $stmt = $conn->prepare("UPDATE Awards SET award_name = ?, award_year = ?, group_id = ? WHERE award_id = ?");
         if (!$stmt) {
             throw new Exception("Failed to prepare statement: " . $conn->error);
         }
-        $stmt->bind_param("siii", $award_name, $award_year, $idol_group_id, $award_id);
+        $stmt->bind_param("siii", $award_name, $award_year, $group_id, $award_id);
         $success = $stmt->execute();
         $stmt->close();
         $conn->close();
