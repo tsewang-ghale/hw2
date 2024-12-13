@@ -39,18 +39,13 @@
             <li class="nav-item">
               <a class="nav-link" href="companies.php">Companies</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="idol_chart.php">Idol Chart</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="songs_chart.php">Song Chart</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="award_chart.php">Awards Chart</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="company_chart.php">Company Chart</a>
-            </li>
+            
           </ul>
           <!-- Search Form -->
           <form class="d-flex" action="search.php" method="get">
