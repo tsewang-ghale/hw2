@@ -13,7 +13,7 @@
       labels: [
         <?php
         // Fetch and display the group names (idol groups with the highest awards)
-        $awards = select_highest_award_winner(); 
+        $awards = select_top_award_winners(); 
         while ($award = $awards->fetch_assoc()) {
           echo "'" . $award['group_name'] . "', "; 
         }
@@ -24,7 +24,7 @@
         data: [
           <?php
           // Fetch and display the award counts for the group with the highest awards
-          $awards = select_highest_award_winner(); 
+          $awards = select_top_award_winners(); 
           while ($award = $awards->fetch_assoc()) {
             echo $award['award_count'] . ", "; 
           }
