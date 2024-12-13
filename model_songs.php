@@ -16,7 +16,7 @@ function insertSong($song_name, $release_date, $idol_group_id) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO Songs (song_name, release_date, idol_group_id) VALUES (?, ?, ?)");
-        $stmt->bind_param("ssi", $song_name, $release_date, $idol_group_id);
+        $stmt->bind_param("sii", $song_name, $release_date, $idol_group_id);
         $success = $stmt->execute();
         $conn->close();
         return $success;
