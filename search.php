@@ -40,13 +40,13 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
         if ($category == 'songs') {
-            echo "<td>" . $row['song_name'] . "</td><td>" . $row['artist'] . "</td><td>" . $row['release_date'] . "</td>";
+            echo "<td>" . $row['song_name'] . "</td><td>" . $row['release_year'] . "</td><td>" . $row['group_id'] . "</td>";
         } elseif ($category == 'idol-groups') {
-            echo "<td>" . $row['group_name'] . "</td><td>" . $row['debut_year'] . "</td><td>" . $row['members'] . "</td>";
+            echo "<td>" . $row['group_name'] . "</td><td>" . $row['debut_year'] . "</td><td>" . $row['members_count'] . "</td>";
         } elseif ($category == 'companies') {
-            echo "<td>" . $row['company_name'] . "</td><td>" . $row['location'] . "</td><td>" . $row['founded_year'] . "</td>";
+            echo "<td>" . $row['company_name'] . "</td><td>" . $row['company_foundation_year'] . "</td><td>" . $row['company_ceo'] . "</td>";
         } elseif ($category == 'awards') {
-            echo "<td>" . $row['award_name'] . "</td><td>" . $row['category'] . "</td><td>" . $row['year'] . "</td>";
+            echo "<td>" . $row['award_name'] . "</td><td>" . $row['award_year'] . "</td><td>" . $row['group_id'] . "</td>";
         }
         echo "</tr>";
     }
