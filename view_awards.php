@@ -37,8 +37,8 @@
     }
 
     .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
+       background-color: #FF0000; /* Bright red */
+  border-color: #CC0000; /* Darker red for the border */
     }
 
     .btn-primary:hover {
