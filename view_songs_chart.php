@@ -1,4 +1,4 @@
-<h1> songs Chart</h1>
+<h1>Songs Chart</h1>
 <div>
   <canvas id="myChart"></canvas>
 </div>
@@ -13,22 +13,21 @@
       datasets: [{
         data: [
           <?php
-          // Initialize the $songs variable to fetch the data from the database
+          // Fetch the data for song count by group
           $songs = selectSongs(); 
           while ($song = $songs->fetch_assoc()) {
-            echo $song['count_song'] . ", "; 
+            echo $song['count_songs'] . ", "; 
           }
           ?>
         ], 
-        // The labels that will appear in the chart's legend and tooltips
         backgroundColor: ['#ff5733', '#33ff57', '#3357ff', '#ff33a8', '#f1c40f'], // You can customize the colors here
       }],
       labels: [
         <?php
-        // Reset $songs and fetch the songs' names
-        $songs = selectsongs(); 
+        // Fetch the data for group names
+        $songs = selectSongs(); 
         while ($song = $songs->fetch_assoc()) {
-          echo "'" . $song['song_name'] . "', "; 
+          echo "'" . $song['group_name'] . "', "; 
         }
         ?>
       ]
