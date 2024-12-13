@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
     <?php 
-      (include "view_awards_newform.php"); 
+      include "view_awards_newform.php"; 
     ?>
   </div>
 </div>
@@ -31,7 +31,7 @@
         <td></td>
         <td>
           <?php
-          (include "view_awards_editform.php"); 
+          include "view_awards_editform.php"; 
           ?>
         </td>
         <td>
