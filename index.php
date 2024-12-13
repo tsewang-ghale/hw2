@@ -108,7 +108,7 @@ mysqli_close($conn);
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
                         if ($category == 'songs') {
-                            echo "<td>" . $row['song_name'] . "</td><td>" . $row['release_year'] . "</td><td>" . $row['group_id'] . "</td>";
+                            echo "<td>" . $row['song_name'] . "</td><td>" . $row['release_date'] . "</td><td>" . $row['group_id'] . "</td>";
                         } elseif ($category == 'idol-groups') {
                             echo "<td>" . $row['group_name'] . "</td><td>" . $row['debut_year'] . "</td><td>" . $row['members_count'] . "</td>";
                         } elseif ($category == 'companies') {
