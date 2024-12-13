@@ -20,17 +20,17 @@
             <label for="award_id<?php echo $award['award_id']; ?>" class="form-label">Award ID</label>
             <input type="number" class="form-control" id="award_id<?php echo $award['award_id']; ?>" name="award_id" value="<?php echo $award['award_id']; ?>">
           </div>
-            <div class="mb-3">
+          <div class="mb-3">
             <label for="award_name<?php echo $award['award_id']; ?>" class="form-label">Award Name</label>
             <input type="text" class="form-control" id="award_name<?php echo $award['award_id']; ?>" name="award_name" value="<?php echo $award['award_name']; ?>">
           </div>
           <div class="mb-3">
-            <label for="award_date<?php echo $award['award_id']; ?>" class="form-label">Date</label>
-            <input type="date" class="form-control" id="award_date<?php echo $award['award_id']; ?>" name="award_date" value="<?php echo $award['award_date']; ?>">
+            <label for="award_year<?php echo $award['award_id']; ?>" class="form-label">Date</label>
+            <input type="number" class="form-control" id="award_year<?php echo $award['award_id']; ?>" name="award_year" value="<?php echo $award['award_year']; ?>">
           </div>
           <div class="mb-3">
-            <label for="idol_group_id<?php echo $award['award_id']; ?>" class="form-label"> Idol Group ID </label>
-            <input type="number" class="form-control" id="idol_group_id<?php echo $award['award_id']; ?>" name="idol_group_id" value="<?php echo $award['idol_group_id']; ?>">
+            <label for="group_id<?php echo $award['award_id']; ?>" class="form-label">Idol Group ID</label>
+            <input type="number" class="form-control" id="group_id<?php echo $award['award_id']; ?>" name="group_id" value="<?php echo $award['group_id']; ?>">
           </div>
           <input type="hidden" name="award_id" value="<?php echo $award['award_id']; ?>">
           <input type="hidden" name="actionType" value="Edit">
