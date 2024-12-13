@@ -37,34 +37,24 @@ mysqli_close($conn);
     <title>K-Pop Library</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-      /* Background slideshow effect */
       body {
+        background: #000;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        animation: backgroundSlide 20s infinite;
-        color: white; /* Optional: Adjust text color for contrast */
+        color: white; /* Adjust text color for contrast */
+      }
+      
+      /* Slideshow styling */
+      .carousel-inner img {
+        width: 100%;
+        height: 100vh; /* Full screen height */
+        object-fit: cover; /* Ensure images cover the area */
       }
 
-      @keyframes backgroundSlide {
-        0% {
-          background-image: url('f1.jpg');
-        }
-        20% {
-          background-image: url('f2.jpg');
-        }
-        40% {
-          background-image: url('f3.jpg');
-        }
-        60% {
-          background-image: url('f4.jpg');
-        }
-        80% {
-          background-image: url('f5.jpg');
-        }
-        100% {
-          background-image: url('f1.jpg');
-        }
+      /* Optional: Styling for carousel controls */
+      .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: black;
       }
     </style>
   </head>
@@ -107,6 +97,35 @@ mysqli_close($conn);
         </div>
       </div>
     </nav>
+
+    <!-- Slideshow Section -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="f1.jpg" class="d-block w-100" alt="K-pop group 1" loading="lazy">
+        </div>
+        <div class="carousel-item">
+          <img src="f2.jpg" class="d-block w-100" alt="K-pop group 2" loading="lazy">
+        </div>
+        <div class="carousel-item">
+          <img src="f3.jpg" class="d-block w-100" alt="K-pop group 3" loading="lazy">
+        </div>
+        <div class="carousel-item">
+          <img src="f4.jpg" class="d-block w-100" alt="K-pop group 4" loading="lazy">
+        </div>
+        <div class="carousel-item">
+          <img src="f5.jpg" class="d-block w-100" alt="K-pop group 5" loading="lazy">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
     <!-- Search Results Section -->
     <?php if ($query && $result): ?>
