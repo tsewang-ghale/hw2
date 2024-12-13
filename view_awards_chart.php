@@ -4,12 +4,22 @@
   <canvas id="myChart"></canvas>
 </div>
 
-<!-- Style to adjust the chart size -->
+<!-- Style to adjust the chart size and set background -->
 <style>
+  /* Set the background image for the entire page */
+  body {
+    background-image: url('b6.jpg'); /* Path to the background image */
+    background-size: cover; /* Ensure the background covers the entire page */
+    background-position: center; /* Center the background */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    color: white; /* Optional: Adjust text color for better contrast */
+  }
+
   /* Ensure that the canvas has specific width and height */
   #myChart {
     width: 70% !important; /* Adjust the width of the chart relative to its container */
     height: 800px !important; /* Fixed height for the chart */
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: Add slight transparency for better visibility */
   }
 </style>
 
