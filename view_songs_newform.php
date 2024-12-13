@@ -29,8 +29,8 @@
             <input type="number" class="form-control" id="release_date" name="release_date">
           </div>
           <div class="mb-3">
-            <label for="idol_group_id" class="form-label">Idol Group ID</label>
-            <input type="number" class="form-control" id="idol_group_id" name="idol_group_id">
+            <label for="group_id" class="form-label">Idol Group ID</label>
+            <input type="number" class="form-control" id="group_id" name="group_id">
           </div>
           <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
