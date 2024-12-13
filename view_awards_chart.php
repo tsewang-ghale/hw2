@@ -1,40 +1,44 @@
-
-<h1>awards Per group</h1>
+<h1>Awards Chart</h1>
 <div>
-  <canvas id="awardsChart"></canvas>
+  <canvas id="myChart"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script>
-  const ctx = document.getElementById('awardsChart').getContext('2d');
+  const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
-    type: 'bar',
+    type: 'bar',  // Bar chart for displaying awards count
     data: {
       labels: [
         <?php
-        // PHP code to generate group names as labels
-        echo "'" . implode("', '", $groupNames) . "'"; // Join group names with commas
+        // Fetch and display the group names (idol groups with the highest awards)
+        $awards = select_highest_award_winner(); 
+        while ($award = $awards->fetch_assoc()) {
+          echo "'" . $award['group_name'] . "', "; 
+        }
         ?>
       ],
       datasets: [{
-        label: 'Number of awards',
+        label: 'Number of Awards', // Label for the bar chart
         data: [
           <?php
-          // PHP code to generate awards data for the chart
-          echo implode(", ", $awardData); // Convert award data to a comma-separated string
+          // Fetch and display the award counts for the group with the highest awards
+          $awards = select_highest_award_winner(); 
+          while ($award = $awards->fetch_assoc()) {
+            echo $award['award_count'] . ", "; 
+          }
           ?>
         ],
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: ['#ff5733'], // Customize colors for bars
+        borderColor: ['#ff5733'], // Matching border colors
         borderWidth: 1
       }]
     },
     options: {
       scales: {
         y: {
-          beginAtZero: true
+          beginAtZero: true // Ensure the y-axis starts at zero
         }
       }
     }
