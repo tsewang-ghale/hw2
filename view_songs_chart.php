@@ -6,7 +6,7 @@
 <style>
   /* Set the background image for the entire page or a specific container */
   body {
-    background-image: url('b7.jpeg');
+    background-image: url('b4.jpeg');
     background-size: cover; /* Make sure the background covers the entire page */
     background-position: center; /* Center the background */
     background-attachment: fixed; /* Keep the background fixed when scrolling */
