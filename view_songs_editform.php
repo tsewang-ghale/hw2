@@ -25,8 +25,8 @@
             <input type="number" class="form-control" id="release_date<?php echo $song['song_id']; ?>" name="release_date" value="<?php echo $song['release_date']; ?>">
           </div>
           <div class="mb-3">
-            <label for="idol_group_id<?php echo $song['song_id']; ?>" class="form-label">Idol Group ID</label>
-            <input type="number" class="form-control" id="idol_group_id<?php echo $song['song_id']; ?>" name="idol_group_id" value="<?php echo $song['idol_group_id']; ?>">
+            <label for="group_id<?php echo $song['song_id']; ?>" class="form-label">Idol Group ID</label>
+            <input type="number" class="form-control" id="group_id<?php echo $song['song_id']; ?>" name="group_id" value="<?php echo $song['group_id']; ?>">
           </div>
           <input type="hidden" name="song_id" value="<?php echo $song['song_id']; ?>">
           <input type="hidden" name="actionType" value="Edit">
