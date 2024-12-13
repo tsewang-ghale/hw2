@@ -17,15 +17,15 @@
       <div class="modal-body">
         <form method="post" action="">
             <div class="mb-3">
-            <label for="group_name<?php echo $idol_group['group_id']; ?>" class="form-label">Group Name</label>
+            <label for="group_name_<?php echo $idol_group['group_id']; ?>" class="form-label">Group Name</label>
             <input type="text" class="form-control" id="group_name<?php echo $idol_group['group_id']; ?>" name="group_name" value="<?php echo $idol_group['group_name']; ?>">
           </div>
           <div class="mb-3">
-            <label for="debut_year<?php echo $idol_group['group_id']; ?>" class="form-label">Debut Year</label>
+            <label for="debut_year_<?php echo $idol_group['group_id']; ?>" class="form-label">Debut Year</label>
             <input type="text" class="form-control" id="debut_year<?php echo $idol_group['group_id']; ?>" name="debut_year" value="<?php echo $idol_group['debut_year']; ?>">
           </div>
           <div class="mb-3">
-            <label for="members<?php echo $idol_group['group_id']; ?>" class="form-label">Members</label>
+            <label for="members_<?php echo $idol_group['group_id']; ?>" class="form-label">Members</label>
             <input type="numbers" class="form-control" id="members<?php echo $idol_group['group_id']; ?>" name="members" value="<?php echo $idol_group['members']; ?>">
           </div>
           <input type="hidden" name="group_id" value="<?php echo $idol_group['group_id']; ?>">
