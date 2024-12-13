@@ -37,12 +37,34 @@ mysqli_close($conn);
     <title>K-Pop Library</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+      /* Background slideshow effect */
       body {
-        background-image: url('b1.jpeg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+        animation: backgroundSlide 20s infinite;
         color: white; /* Optional: Adjust text color for contrast */
+      }
+
+      @keyframes backgroundSlide {
+        0% {
+          background-image: url('f1.jpg');
+        }
+        20% {
+          background-image: url('f2.jpg');
+        }
+        40% {
+          background-image: url('f3.jpg');
+        }
+        60% {
+          background-image: url('f4.jpg');
+        }
+        80% {
+          background-image: url('f5.jpg');
+        }
+        100% {
+          background-image: url('f1.jpg');
+        }
       }
     </style>
   </head>
