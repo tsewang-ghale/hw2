@@ -21,8 +21,8 @@
             <input type="text" class="form-control" id="company_name" name="company_name">
           </div>
           <div class="mb-3">
-            <label for="companies_foundation_date" class="form-label">Company Foundation Date</label>
-            <input type="number" class="form-control" id="companies_foundation_date" name="companies_foundation_date">
+            <label for="company_foundation_year" class="form-label">Company Foundation Year</label>
+            <input type="number" class="form-control" id="company_foundation_year" name="company_foundation_year">
           </div>
           <div class="mb-3">
             <label for="company_ceo" class="form-label">Company CEO</label>
