@@ -28,7 +28,7 @@
           <td><?php echo $song['song_id']; ?></td>
           <td><?php echo $song['song_name']; ?></td>
           <td><?php echo $song['release_date']; ?></td>
-          <td><?php echo $song['idol_group_id']; ?></td>
+          <td><?php echo $song['group_id']; ?></td>
           <td>
             <?php
             include "view_songs_editform.php";
