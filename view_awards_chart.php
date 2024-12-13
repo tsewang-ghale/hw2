@@ -30,8 +30,30 @@
           }
           ?>
         ],
-        backgroundColor: ['#ff5733'], // Customize colors for bars
-        borderColor: ['#ff5733'], // Matching border colors
+        // Array of colors for each bar
+        backgroundColor: [
+          <?php
+          // Fetch and display the color for each bar dynamically (example: using a random color generator or predefined colors)
+          $awards = select_top_award_winners(); 
+          $colors = ["#ff5733", "#33ff57", "#3357ff", "#ff33a8", "#f1c40f"]; // Example color array
+          $i = 0;
+          while ($award = $awards->fetch_assoc()) {
+            echo "'" . $colors[$i % count($colors)] . "', "; // Loop through colors array for each bar
+            $i++;
+          }
+          ?>
+        ],
+        borderColor: [
+          <?php
+          // Same border colors as background colors (you can customize if needed)
+          $awards = select_top_award_winners(); 
+          $i = 0;
+          while ($award = $awards->fetch_assoc()) {
+            echo "'" . $colors[$i % count($colors)] . "', "; // Loop through colors array for each bar
+            $i++;
+          }
+          ?>
+        ],
         borderWidth: 1
       }]
     },
