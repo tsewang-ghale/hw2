@@ -28,7 +28,7 @@
       <tr>
         <td><?php echo $company['company_id']; ?> </td>
         <td><?php echo $company['company_name']; ?></td>
-        <td><?php echo $company['company_foundation_date']; ?></td> 
+        <td><?php echo $company['company_foundation_year']; ?></td> 
         <td><?php echo $company['company_ceo']; ?></td>
         <td><a href="company-details.php?id=<?php echo $company['company_id']; ?>" class="btn btn-primary btn-sm">Details</a></td>
         <td>
