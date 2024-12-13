@@ -32,7 +32,7 @@ function UpdateIdolGroup($group_id,$group_name, $debut_year, $members_count) {
         if (!$stmt) {
             throw new Exception("Failed to prepare statement: " . $conn->error);
         }
-        $stmt->bind_param("isii",$group_id,$group_name, $debut_year, $members_count); 
+        $stmt->bind_param("siii",$group_name, $debut_year, $members_count,$group_id); 
         $success = $stmt->execute();
         $stmt->close();
         $conn->close();
