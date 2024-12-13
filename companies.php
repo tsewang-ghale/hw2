@@ -1,6 +1,6 @@
 <?php
-require_once("util-db.php");
-require_once("model-companies.php");
+require_once("util_db.php");
+require_once("model_companies.php");
 
 $pageTitle = "Companies";
 include "view_header.php";
@@ -8,7 +8,7 @@ include "view_header.php";
 if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
         case "Add":
-            if (InsertCompany($_POST['company_id'],$_POST['company_name'], $_POST['company_foundation_date'], $_POST['company_ceo'])) {
+            if (InsertCompany($_POST['company_name'], $_POST['company_foundation_date'], $_POST['company_ceo'])) {
                 echo '<div class="alert alert-success" role="alert">Company added.</div>';
             } else {
                 echo '<div class="alert alert-danger" role="alert">Error adding company.</div>';
@@ -31,6 +31,6 @@ if (isset($_POST['actionType'])) {
     }
 }
 $companies = selectCompanies(); // Fetch companies from the model
-include "view-companies.php";
+include "view_companies.php";
 include "view_footer.php"; 
 ?>
