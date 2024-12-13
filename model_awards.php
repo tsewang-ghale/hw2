@@ -13,11 +13,11 @@ function selectAwards() {
     }
 }
 
-function InsertAward($award_name, $award_year, $group_id) {
+function InsertAward($award_id, $award_name, $award_year, $group_id) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO Awards (award_name, award_year, group_id) VALUES (?, ?, ?)");
-        $stmt->bind_param("sii", $award_name, $award_year, $group_id);
+        $stmt = $conn->prepare("INSERT INTO Awards (award_id, award_name, award_year, group_id) VALUES (?, ?, ?)");
+        $stmt->bind_param("isii", $award_name, $award_year, $group_id);
         $success = $stmt->execute();
         $conn->close();
         return $success;
