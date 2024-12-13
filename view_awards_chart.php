@@ -1,6 +1,7 @@
 <h1>Awards Chart</h1>
 <div>
-  <canvas id="myChart"></canvas>
+  <!-- Adjusting the width and height of the canvas element -->
+  <canvas id="myChart" width="400" height="300"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -33,7 +34,7 @@
         // Array of colors for each bar
         backgroundColor: [
           <?php
-          // Fetch and display the color for each bar dynamically (example: using a random color generator or predefined colors)
+          // Fetch and display the color for each bar dynamically
           $awards = select_top_award_winners(); 
           $colors = ["#ff5733", "#33ff57", "#3357ff", "#ff33a8", "#f1c40f"]; // Example color array
           $i = 0;
