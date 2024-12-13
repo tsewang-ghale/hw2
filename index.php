@@ -44,7 +44,7 @@
               <a class="nav-link" href="songs_chart.php">Song Chart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="award_chart.php">Awards Chart</a>
+              <a class="nav-link" href="awards_chart.php">Awards Chart</a>
             
           </ul>
           <!-- Search Form -->
