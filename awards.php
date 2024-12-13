@@ -1,6 +1,6 @@
 <?php
-require_once("util-db.php");
-require_once("model-awards.php");
+require_once("util_db.php");
+require_once("model_awards.php");
 
 $pageTitle = "Awards";
 include "view_header.php";
@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
     }
 }
 $awards = selectAwards(); // Fetch awards from the model
-include "view-awards.php"; 
+include "view_awards.php"; 
 include "view_footer.php"
 ?>
 
