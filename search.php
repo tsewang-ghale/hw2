@@ -9,13 +9,13 @@ $query = isset($_GET['query']) ? $_GET['query'] : '';
 // Define SQL query based on the selected category
 $sql = '';
 if ($category == 'songs') {
-    $sql = "SELECT * FROM songs WHERE song_name LIKE '%$query%'";
+    $sql = "SELECT * FROM Songs WHERE song_name LIKE '%$query%'";
 } elseif ($category == 'idol-groups') {
-    $sql = "SELECT * FROM idol_groups WHERE group_name LIKE '%$query%'";
+    $sql = "SELECT * FROM IdolGroups WHERE group_name LIKE '%$query%'";
 } elseif ($category == 'companies') {
-    $sql = "SELECT * FROM companies WHERE company_name LIKE '%$query%'";
+    $sql = "SELECT * FROM Companies WHERE company_name LIKE '%$query%'";
 } elseif ($category == 'awards') {
-    $sql = "SELECT * FROM awards WHERE award_name LIKE '%$query%'";
+    $sql = "SELECT * FROM Awards WHERE award_name LIKE '%$query%'";
 }
 
 // Execute the query
