@@ -50,6 +50,13 @@
              <li class="nav-item">
               <a class="nav-link" href="awards.php"> Awards</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="songs_chart.php"> Songs Chart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="awards_char.php">  Awards Chart</a>
+            </li>
+            
           </ul>
         </div>
       </div>
