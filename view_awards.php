@@ -37,23 +37,15 @@
     }
 
     .btn-primary {
-       background-color: #F1F1F1; /* Bright red */
-  border-color: #004085; /* Darker red for the border */
+      background-color: #007bff;
+      border-color: #007bff;
     }
 
     .btn-primary:hover {
       background-color: #0056b3;
       border-color: #004085;
     }
-  .btn-danger {
-  background-color: #FF0000; /* Bright red */
-  border-color: #CC0000; /* Darker red for the border */
-}
-
-.btn-danger:hover {
-  background-color: #CC0000; /* Darker red on hover */
-  border-color: #990000; /* Even darker red for the border on hover */
-}
+  
 
 
   .row h1 {
