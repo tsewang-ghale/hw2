@@ -1,6 +1,6 @@
 <h1>Songs Chart</h1>
 <div>
-  <canvas id="myChart"></canvas>
+  <canvas id="myChart" width="400" height="400"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
