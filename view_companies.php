@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
     <?php 
-      include "view-companies-newform.php"; 
+      include "view_companies_newform.php"; 
     ?>
   </div>
 </div>
@@ -33,7 +33,7 @@
         <td><a href="company-details.php?id=<?php echo $company['company_id']; ?>" class="btn btn-primary btn-sm">Details</a></td>
         <td>
           <?php
-          include "view-companies-editform.php"; 
+          include "view_companies_editform.php"; 
           ?>
         </td>
         <td>
