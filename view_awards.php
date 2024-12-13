@@ -3,19 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Companies</title>
+  <title>Awards</title>
   <link rel="stylesheet" href="path/to/your/css/file.css">
   <style>
     /* Set the background image for the entire page */
     body {
-      background-image: url('b3.jpg');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-
-    /* Optional: Set a background image for just the table section */
-    .table-responsive {
       background-image: url('b3.jpg');
       background-size: cover;
       background-position: center center;
@@ -26,11 +18,11 @@
 <body>
   <div class="row">
     <div class="col">
-      <h1>Companies</h1>
+      <h1>Awards</h1>
     </div>
     <div class="col-auto">
       <?php 
-        include "view_companies_newform.php"; 
+        include "view_awards_newform.php"; 
       ?>
     </div>
   </div>
@@ -39,30 +31,30 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>Company Name</th>
-          <th>Location</th>
-          <th>Industry</th>
+          <th>Award Name</th>
+          <th>Award Date</th>
+          <th>Idol Group ID</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
       <?php
-      while ($company = $companies->fetch_assoc()) {
+      while ($award = $awards->fetch_assoc()) {
       ?>
         <tr>
-          <td><?php echo $company['company_id']; ?> </td>
-          <td><?php echo $company['company_name']; ?></td>
-          <td><?php echo $company['location']; ?></td> 
-          <td><?php echo $company['industry']; ?></td>
+          <td><?php echo $award['award_id']; ?> </td>
+          <td><?php echo $award['award_name']; ?></td>
+          <td><?php echo $award['award_year']; ?></td> 
+          <td><?php echo $award['group_id']; ?></td>
           <td></td>
           <td>
             <?php
-            include "view_companies_editform.php"; 
+            include "view_awards_editform.php"; 
             ?>
           </td>
           <td>
             <form method="post" action="">
-              <input type="hidden" name="company_id" value="<?php echo $company['company_id']; ?>">
+              <input type="hidden" name="award_id" value="<?php echo $award['award_id']; ?>">
               <input type="hidden" name="actionType" value="Delete">
               <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
