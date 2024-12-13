@@ -8,7 +8,7 @@
 <style>
   /* Set the background image for the entire page */
   body {
-    background-image: url('b6.jpg'); /* Path to the background image */
+    background-image: url('b4.jpg'); /* Path to the background image */
     background-size: cover; /* Ensure the background covers the entire page */
     background-position: center; /* Center the background */
     background-attachment: fixed; /* Keep the background fixed when scrolling */
