@@ -99,7 +99,7 @@ mysqli_close($conn);
                     } elseif ($category == 'idol-groups') {
                         echo "<thead><tr><th>Group Name</th><th>Debut Year</th><th>Members</th></tr></thead>";
                     } elseif ($category == 'companies') {
-                        echo "<thead><tr><th>Company Name</th><th>Location</th><th>Founded Year</th></tr></thead>";
+                        echo "<thead><tr><th>Company Name</th><th>Founded Year</th><th>CEO</th></tr></thead>";
                     } elseif ($category == 'awards') {
                         echo "<thead><tr><th>Award Name</th><th>Category</th><th>Year</th></tr></thead>";
                     }
