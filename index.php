@@ -57,10 +57,10 @@ mysqli_close($conn);
           background-image: url('b7.jpeg');
         }
         60% {
-          background-image: url('f4.jpg');
+          background-image: url('f9.jpg');
         }
         80% {
-          background-image: url('f5.jpg');
+          background-image: url('f4.jpg');
         }
         100% {
           background-image: url('b1.jpeg');
