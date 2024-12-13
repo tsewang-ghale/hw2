@@ -95,7 +95,7 @@ mysqli_close($conn);
                     <?php
                     // Display column headings based on category
                     if ($category == 'songs') {
-                        echo "<thead><tr><th>Song Name</th><th>Artist</th><th>Release Date</th></tr></thead>";
+                        echo "<thead><tr><th>Song Name</th><th>Release Date</th><th>Group Id</th></tr></thead>";
                     } elseif ($category == 'idol-groups') {
                         echo "<thead><tr><th>Group Name</th><th>Debut Year</th><th>Members</th></tr></thead>";
                     } elseif ($category == 'companies') {
