@@ -12,7 +12,6 @@ function selectSongs() {
         throw $e;
     }
 }
-
 function insertSong($song_name, $release_date, $group_id) {
     try {
         $conn = get_db_connection();
@@ -26,11 +25,10 @@ function insertSong($song_name, $release_date, $group_id) {
         throw $e;
     }
 }
-
 function updateSong($song_id, $song_name, $release_date, $group_id) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `Songs` SET `song_name` = ?, `release_date` = ?, `group_id` = ? WHERE `song_id` = ?");
+        $stmt = $conn->prepare("UPDATE Songs SET song_name = ?, release_date = ?, group_id = ? WHERE song_id = ?");
         if (!$stmt) {
             throw new Exception("Failed to prepare statement: " . $conn->error);
         }
@@ -46,31 +44,15 @@ function updateSong($song_id, $song_name, $release_date, $group_id) {
         throw $e;
     }
 }
-
 function deleteSong($song_id) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM `Songs` WHERE song_id = ?");
+        $stmt = $conn->prepare("DELETE FROM Songs WHERE song_id = ?");
         $stmt->bind_param("i", $song_id);
         $success = $stmt->execute();
         $stmt->close();
         $conn->close();
         return $success;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
-// Fetch the group IDs and names for the dropdown
-function getGroupIds() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT group_id, group_name FROM IdolGroups");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
