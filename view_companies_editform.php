@@ -25,8 +25,8 @@
             <input type="text" class="form-control" id="company_name<?php echo $company['company_id']; ?>" name="company_name" value="<?php echo $company['company_name']; ?>">
           </div>
           <div class="mb-3">
-            <label for="company_foundation_date<?php echo $company['company_id']; ?>" class="form-label">Company Foundation Date</label>
-            <input type="number" class="form-control" id="company_foundation_date<?php echo $company['company_id']; ?>" name="company_foundation_date" value="<?php echo $company['company_foundation_date']; ?>">
+            <label for="company_foundation_year<?php echo $company['company_id']; ?>" class="form-label">Company Foundation Date</label>
+            <input type="number" class="form-control" id="company_foundation_year<?php echo $company['company_id']; ?>" name="company_foundation_year" value="<?php echo $company['company_foundation_year']; ?>">
           </div>
           <div class="mb-3">
             <label for="company_ceo<?php echo $company['company_id']; ?>" class="form-label">Company CEO</label>
