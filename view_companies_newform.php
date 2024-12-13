@@ -17,19 +17,15 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="company_id" class="form-label">Company ID</label>
-            <input type="number" class="form-control" id="company_id" name="company_id">
-          </div>
-          <div class="mb-3">
             <label for="company_name" class="form-label">Company Name</label>
             <input type="text" class="form-control" id="company_name" name="company_name">
           </div>
           <div class="mb-3">
             <label for="companies_foundation_date" class="form-label">Company Foundation Date</label>
-            <input type="date" class="form-control" id="companies_foundation_date" name="companies_foundation_date">
+            <input type="number" class="form-control" id="companies_foundation_date" name="companies_foundation_date">
           </div>
           <div class="mb-3">
-            <label for="company_ceo" class="form-label">Company CEO </label>
+            <label for="company_ceo" class="form-label">Company CEO</label>
             <input type="text" class="form-control" id="company_ceo" name="company_ceo">
           </div>
         
