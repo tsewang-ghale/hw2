@@ -17,17 +17,13 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <div class="mb-3">
-            <label for="idol_group_id" class="form-label">Idol Group ID</label>
-            <input type="number" class="form-control" id="idol_group_id" name="idol_group_id">
-          </div>
             <label for="group_name" class="form-label">Group Name</label>
             <input type="text" class="form-control" id="group_name" name="group_name">
           </div>
           
           <div class="mb-3">
             <label for="debut_year" class="form-label">Debut Year</label>
-            <input type="date" class="form-control" id="debut_year" name="debut_year">
+            <input type="text" class="form-control" id="debut_year" name="debut_year">
           </div>
           <div class="mb-3">
             <label for="members_count" class="form-label">Members Count</label>
