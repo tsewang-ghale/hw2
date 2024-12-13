@@ -1,7 +1,14 @@
 <h1>Songs Chart</h1>
 <div>
-  <canvas id="myChart" width="400" height="400"></canvas>
+  <canvas id="myChart"></canvas>
 </div>
+
+<style>
+  #myChart {
+    width: 50% !important; /* Adjust the width as per your needs */
+    height: auto !important; /* Maintain aspect ratio */
+  }
+</style>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
