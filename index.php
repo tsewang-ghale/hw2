@@ -38,7 +38,7 @@ mysqli_close($conn);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
       body {
-        background-image: url('b6.jpg');
+        background-image: url('b1.jpeg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
