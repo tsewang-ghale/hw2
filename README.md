@@ -1,56 +1,56 @@
-# PHP GET and POST Practice Site
+# K-Pop Library
 
-This repository contains a small PHP website used to practice form submission with the HTTP `GET` and `POST` methods. The project uses shared header and footer files, Bootstrap styling, and separate result pages to show how form data is passed between pages.
+K-Pop Library is a PHP and MySQL web application for exploring and managing information about K-pop idol groups, songs, entertainment companies, and awards. The project includes database-driven pages, search, CRUD workflows, and chart-based summaries.
+
+Live site:
+
+https://finalproject.tsewangghale.oucreate.com/index.php
 
 ## Features
 
-- Home page with navigation to GET and POST examples
-- POST form page and result page
-- GET form page and result page
-- Shared header and footer templates
-- Bootstrap navigation layout
+- View K-pop idol groups, songs, companies, and awards
+- Add, edit, and delete records through PHP forms
+- Search records by category
+- Display chart summaries with Chart.js
+- Navigate through a Bootstrap-based interface
+- Use image assets and background styling for a polished visual design
 
-## Files
+## Tech Stack
 
-| File | Purpose |
+| Layer | Tools |
 | --- | --- |
-| `index.php` | Home page with links to the form examples |
-| `post.php` | Form submitted with `POST` |
-| `post-result.php` | Displays submitted POST data |
-| `get.php` | Form submitted with `GET` |
-| `get-result.php` | Displays submitted GET data |
-| `view_header.php` | Shared page header and navigation |
-| `view_footer.php` | Shared page footer |
+| Frontend | HTML, CSS, Bootstrap, Chart.js |
+| Backend | PHP |
+| Database | MySQL |
+| Hosting | OU Create |
+| Version Control | Git and GitHub |
 
-## Technologies
+## Project Structure
 
-- PHP
-- HTML
-- Bootstrap
+| Area | Files |
+| --- | --- |
+| Main pages | `index.php`, `idol_groups.php`, `songs.php`, `companies.php`, `awards.php`, `search.php` |
+| Data models | `model_idol_groups.php`, `model_songs.php`, `model_companies.php`, `model_awards.php` |
+| Views | `view_idol_groups.php`, `view_songs.php`, `view_companies.php`, `view_awards.php` |
+| Forms | `view_*_newform.php`, `view_*_editform.php` |
+| Charts | `songs_chart.php`, `awards_chart.php`, `view_songs_chart.php`, `view_awards_chart.php` |
+| Shared utilities | `util_db.php`, `view_header.php`, `view_footer.php` |
+| Assets | `b*.jpg`, `b*.jpeg`, `f*.jpg` |
 
-## How to Run Locally
+## Learning Outcomes
 
-Use PHP's built-in local server from the repository root:
+- Designed a database-backed PHP application
+- Practiced CRUD workflows across related tables
+- Built category-based search
+- Used Chart.js to summarize database records visually
+- Organized application code into models, views, and page controllers
+- Deployed a web application through OU Create
 
-```bash
-php -S localhost:8000
-```
+## Local Setup Notes
 
-Then open:
-
-```text
-http://localhost:8000
-```
-
-## Skills Demonstrated
-
-- PHP page includes
-- GET vs. POST form submission
-- Basic input handling
-- Reusable layout files
-- Bootstrap navigation
+This project expects a MySQL database connection in `util_db.php`. To run it locally, use your own database host, username, password, and database name, then serve the project with a PHP-enabled local server.
 
 ## Author
 
-Tsewang Diki Ghale  
+Tsewang Diki Ghale
 GitHub: [tsewang-ghale](https://github.com/tsewang-ghale)
